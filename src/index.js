@@ -20,7 +20,7 @@ ReactDOM.render(
   <React.StrictMode>
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <Login />
+        <Router />
       </ThemeProvider>
     </StylesProvider>
   </React.StrictMode>,
