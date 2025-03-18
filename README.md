@@ -1,43 +1,75 @@
-# Getting Started with Create React App
+# Alura Feira
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação de feira online desenvolvida com React e Material-UI.
 
-## Available Scripts
+## Estrutura do Projeto
 
-In the project directory, you can run:
+A estrutura do projeto é a seguinte:
+
+public/
+src/
+.env
+,gitignore
+jsconfig.json
+LICENSE
+package.json
+README.md
+yarn.lock
+
+## Scripts Disponíveis
+
+No diretório do projeto, você pode executar:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Executa a aplicação em modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-la no navegador.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Inicia o executor de testes no modo interativo.\
+Veja a seção sobre [executando testes](https://facebook.github.io/create-react-app/docs/running-tests) para mais informações.
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Compila a aplicação para produção na pasta `build`.\
+Ele agrupa corretamente o React no modo de produção e otimiza a compilação para o melhor desempenho.
 
 ### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Nota: esta é uma operação sem retorno. Uma vez que você `eject`, você não pode voltar!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Se você não estiver satisfeito com a ferramenta de compilação e as escolhas de configuração, você pode `eject` a qualquer momento. Este comando removerá a dependência única de compilação do seu projeto.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Estrutura de Componentes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `src/components/Produto`
+
+Contém os componentes relacionados ao produto, incluindo o estilo.
+
+### `src/pages/Carrinho`
+
+Contém a página do carrinho de compras e seus estilos.
+
+### `src/pages/Feira`
+
+Contém a página principal da feira, incluindo a lista de produtos e a barra de navegação.
+
+### `src/pages/Login`
+
+Contém a página de login e seus estilos.
+
+## Configuração de Rotas
+
+As rotas da aplicação são configuradas no arquivo `src/routes.js`. As principais rotas são:
+
+- `/`: Página de Login
+- `/feira`: Página da Feira
+- `/carrinho`: Página do Carrinho
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## Learn More
 
