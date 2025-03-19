@@ -11,15 +11,14 @@ import {
 } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import { UsuarioContext } from 'common/context/Usuario';
+import { useContext } from 'react';
 
-function Login({nome, setNome, saldo, setSaldo}) {
+function Login() {
   const history = useHistory();
+  const {nome, setNome, saldo, setSaldo} = useContext(UsuarioContext);
   return (
     <Container>
-      <UsuarioContext.Consumer value={{ nome, setNome, saldo, setSaldo }}>
-      {({nome, setNome, saldo, setSaldo}) => (
-        <>
-        <Titulo>
+      <Titulo>
         Insira o seu nome
       </Titulo>
       <InputContainer>
@@ -54,9 +53,6 @@ function Login({nome, setNome, saldo, setSaldo}) {
       >
         Avançar
       </Button>
-      </>
-      )}
-      </UsuarioContext.Consumer>
     </Container>
   )
 };
