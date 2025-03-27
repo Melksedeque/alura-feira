@@ -12,7 +12,7 @@ function Produto({
   valor,
   unidade
 }) {
-  const { adicionarProduto } = useCarrinhoContext()
+  const { carrinho, adicionarProduto } = useCarrinhoContext()
   
   return (
       <Container>
