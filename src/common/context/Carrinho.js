@@ -19,16 +19,20 @@ export const useCarrinhoContext = () => {
         throw new Error('useCarrinhoContext deve ser usado dentro de um CarrinhoProvider');
     }
 
+    function mudarQuantidade(id, quantidade){
+        return carrinho.map(item => {
+            if(item.id === id) item.quantidade += quantidade;
+            return item;
+        }).filter(item => item.quantidade > 0);
+    }
+
     function adicionarProduto(novoProduto) {
         const temNoCarrinho = carrinho.some(item => item.id === novoProduto.id);
         if(!temNoCarrinho){
           novoProduto.quantidade = 1;
           return setCarrinho(carrinhoAnterior => [...carrinho, novoProduto])
         }
-        setCarrinho(carrinhoAnterior => carrinhoAnterior.map(item => {
-          if(item.id === novoProduto.id) item.quantidade += 1;
-          return item;
-        }))    
+        setCarrinho(mudarQuantidade(novoProduto.id, 1))    
     }
 
     function removerProduto(id) {
@@ -37,10 +41,7 @@ export const useCarrinhoContext = () => {
         if(ehUltimo){
           return setCarrinho(carrinhoAnterior => carrinhoAnterior.filter(item => item.id !== id))
         }
-        setCarrinho(carrinhoAnterior => carrinhoAnterior.map(item => {
-          if(item.id === id) item.quantidade -= 1;
-          return item;
-        }))
+        setCarrinho(mudarQuantidade(id, -1))
     }
 
     return {carrinho, setCarrinho, adicionarProduto, removerProduto};
