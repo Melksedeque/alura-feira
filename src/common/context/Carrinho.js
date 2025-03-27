@@ -13,7 +13,7 @@ export const CarrinhoProvider = ({children}) => {
     )
 }
 
-const useCarrinhoContext = () => {
+export const useCarrinhoContext = () => {
     const {carrinho, setCarrinho} = useContext(CarrinhoContext);
     if(!carrinho || !setCarrinho){
         throw new Error('useCarrinhoContext deve ser usado dentro de um CarrinhoProvider');
