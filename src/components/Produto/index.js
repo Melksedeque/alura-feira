@@ -12,18 +12,8 @@ function Produto({
   valor,
   unidade
 }) {
-  const { carrinho, setCarrinho } = useCarrinhoContext()
-  function adicionarProduto(novoProduto) {
-    const temNoCarrinho = carrinho.some(item => item.id === novoProduto.id);
-    if(!temNoCarrinho){
-      novoProduto.quantidade = 1;
-      return setCarrinho(carrinhoAnterior => [...carrinho, novoProduto])
-    }
-    setCarrinho(carrinhoAnterior => carrinhoAnterior.map(item => {
-      if(item.id === novoProduto.id) item.quantidade += 1;
-      return item;
-    }))    
-  }
+  const { adicionarProduto } = useCarrinhoContext()
+  
   return (
       <Container>
         <div>
