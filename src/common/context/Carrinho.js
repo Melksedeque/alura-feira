@@ -31,5 +31,17 @@ export const useCarrinhoContext = () => {
         }))    
     }
 
-    return {carrinho, setCarrinho, adicionarProduto};
+    function removerProduto(id) {
+        const produto = carrinho.find(item => item.id === id);
+        const ehUltimo = produto.quantidade === 1;
+        if(ehUltimo){
+          return setCarrinho(carrinhoAnterior => carrinhoAnterior.filter(item => item.id !== id))
+        }
+        setCarrinho(carrinhoAnterior => carrinhoAnterior.map(item => {
+          if(item.id === id) item.quantidade -= 1;
+          return item;
+        }))
+    }
+
+    return {carrinho, setCarrinho, adicionarProduto, removerProduto};
 }
