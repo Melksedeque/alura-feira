@@ -12,6 +12,7 @@ function Produto({
   valor,
   unidade
 }) {
+  const { carrinho, setCarrinho } = useContext(CarrinhoContext)
   return (
       <Container>
         <div>
