@@ -19,6 +19,7 @@ export const useCarrinhoContext = () => {
         throw new Error('useCarrinhoContext deve ser usado dentro de um CarrinhoProvider');
     }
 
+    // TODO: Alterar função mudarQuantidade para não permitir quantidade negativa
     function mudarQuantidade(id, quantidade){
         return carrinho.map(item => {
             if(item.id === id) item.quantidade += quantidade;
