@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext, useContext } from 'react';
 import { useState } from 'react';
 
 export const CarrinhoContext = createContext();
@@ -11,4 +11,12 @@ export const CarrinhoProvider = ({children}) => {
             {children}
         </CarrinhoContext.Provider>
     )
+}
+
+const useCarrinhoContext = () => {
+    const {carrinho, setCarrinho} = useContext(CarrinhoContext);
+    if(!carrinho || !setCarrinho){
+        throw new Error('useCarrinhoContext deve ser usado dentro de um CarrinhoProvider');
+    }
+    return {carrinho, setCarrinho};
 }
