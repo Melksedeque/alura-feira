@@ -29,6 +29,7 @@ function Produto({
         <div>
           <IconButton
             color="secondary" onClick={() => removerProduto(id)}
+            disabled={!produtoNoCarrinho?.quantidade}
           >
             <RemoveIcon />
           </IconButton>
