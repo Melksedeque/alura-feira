@@ -14,7 +14,15 @@ alura-feira/
 │   │   ├── brocolis.png
 │   │   ├── pepino.png
 │   │   └── tomate.png
+│   └── index.html
 ├── src/
+│   ├── assets/
+│   ├── commons/
+│   ├── components/
+│   ├── pages/
+│   ├── index.css
+│   ├── index.js
+│   └── routes.js
 ├── .env
 ├── .gitignore
 ├── jsconfig.json
