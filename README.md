@@ -28,6 +28,8 @@ alura-feira/
 │   │   │   └── styles.js
 │   ├── pages/
 │   │   ├── Carrinho/
+│   │   │   ├── index.js
+│   │   │   └── styles.js
 │   │   ├── Feira/
 │   │   └── Login/
 │   ├── index.css
