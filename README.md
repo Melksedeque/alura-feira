@@ -23,6 +23,9 @@ alura-feira/
 │   │   │   ├── Carrinho.js
 │   │   │   └── Usuario.js
 │   ├── components/
+│   │   ├── Produto/
+│   │   │   ├── index.js
+│   │   │   └── styles.js
 │   ├── pages/
 │   ├── index.css
 │   ├── index.js
