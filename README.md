@@ -6,15 +6,16 @@ Este projeto é uma aplicação de feira online desenvolvida com React e Materia
 
 A estrutura do projeto é a seguinte:
 
-public/
-src/
-.env
-,gitignore
-jsconfig.json
-LICENSE
-package.json
-README.md
-yarn.lock
+alura-feira/
+├── public/
+├── src/
+├── .env
+├── .gitignore
+├── jsconfig.json
+├── LICENSE
+├── package.json
+├── README.md
+└── yarn.lock
 
 ## Scripts Disponíveis
 
