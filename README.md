@@ -31,6 +31,8 @@ alura-feira/
 │   │   │   ├── index.js
 │   │   │   └── styles.js
 │   │   ├── Feira/
+│   │   │   ├── index.js
+│   │   │   └── styles.js
 │   │   └── Login/
 │   ├── index.css
 │   ├── index.js
