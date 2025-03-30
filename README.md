@@ -17,7 +17,8 @@ alura-feira/
 │   └── index.html
 ├── src/
 │   ├── assets/
-│   ├── commons/
+│   │   └── logo.svg
+│   ├── common/
 │   ├── components/
 │   ├── pages/
 │   ├── index.css
