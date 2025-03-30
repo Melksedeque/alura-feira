@@ -19,6 +19,9 @@ alura-feira/
 │   ├── assets/
 │   │   └── logo.svg
 │   ├── common/
+│   │   ├── context/
+│   │   │   ├── Carrinho.js
+│   │   │   └── Usuario.js
 │   ├── components/
 │   ├── pages/
 │   ├── index.css
