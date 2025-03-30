@@ -8,6 +8,12 @@ A estrutura do projeto é a seguinte:
 
 alura-feira/
 ├── public/
+│   ├── assets/
+│   │   ├── abobora.png
+│   │   ├── batata.png
+│   │   ├── brocolis.png
+│   │   ├── pepino.png
+│   │   └── tomate.png
 ├── src/
 ├── .env
 ├── .gitignore
