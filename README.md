@@ -27,6 +27,9 @@ alura-feira/
 │   │   │   ├── index.js
 │   │   │   └── styles.js
 │   ├── pages/
+│   │   ├── Carrinho/
+│   │   ├── Feira/
+│   │   └── Login/
 │   ├── index.css
 │   ├── index.js
 │   └── routes.js
