@@ -47,10 +47,9 @@ export const useCarrinhoContext = () => {
     }
 
     useEffect(() => {
-        const carrinhoLocalStorage = JSON.parse(localStorage.getItem('carrinho'));
-        const quantidadeProduto  = 0
-        if(carrinhoLocalStorage) setCarrinho(carrinhoLocalStorage);
-    }, []);
+        const novaQuantidade  = carrinho.reduce((contador, produto) => contador + produto.quantidade, 0)
+        setQuantidadeProdutos(novaQuantidade);
+    }, [carrinho, setQuantidadeProdutos]);
 
     return {carrinho, setCarrinho, adicionarProduto, removerProduto};
 }
