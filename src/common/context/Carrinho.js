@@ -51,5 +51,5 @@ export const useCarrinhoContext = () => {
         setQuantidadeProdutos(novaQuantidade);
     }, [carrinho, setQuantidadeProdutos]);
 
-    return {carrinho, setCarrinho, adicionarProduto, removerProduto};
+    return {carrinho, setCarrinho, adicionarProduto, removerProduto, quantidadeProdutos, setQuantidadeProdutos};
 }
