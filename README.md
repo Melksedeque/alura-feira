@@ -5,7 +5,7 @@ Este projeto é uma aplicação de feira online desenvolvida com React e Materia
 ## Estrutura do Projeto
 
 A estrutura do projeto é a seguinte:
-
+```plaintext
 alura-feira/
 ├── public/
 │   ├── assets/
@@ -46,6 +46,7 @@ alura-feira/
 ├── package.json
 ├── README.md
 └── yarn.lock
+```
 
 ## Scripts Disponíveis
 
