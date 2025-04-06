@@ -98,6 +98,7 @@ As rotas da aplicação são configuradas no arquivo `src/routes.js`. As princip
 - `/`: Página de Login
 - `/feira`: Página da Feira
 - `/carrinho`: Página do Carrinho
+- `/login`: Página de Login
 
 ## Licença
 
