@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect } from 'react';
 import { useState } from 'react';
 import { UsuarioContext } from './Usuario';
+import { PagamentoContext } from './Pagamento';
 
 export const CarrinhoContext = createContext();
 CarrinhoContext.displayName = 'Carrinho';
@@ -18,7 +19,7 @@ export const CarrinhoProvider = ({children}) => {
 
 export const useCarrinhoContext = () => {
     const {carrinho, setCarrinho, quantidadeProdutos, setQuantidadeProdutos, valorTotalCarrinho, setValorTotalCarrinho} = useContext(CarrinhoContext);
-    const { formaPagamento } = usePagamentoContext();
+    const { formaPagamento } = useContext(PagamentoContext);
     const { setSaldo } = useContext(UsuarioContext);
     if(!carrinho || !setCarrinho){
         throw new Error('useCarrinhoContext deve ser usado dentro de um CarrinhoProvider');
