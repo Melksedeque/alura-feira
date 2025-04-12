@@ -17,6 +17,7 @@ export const CarrinhoProvider = ({children}) => {
 
 export const useCarrinhoContext = () => {
     const {carrinho, setCarrinho, quantidadeProdutos, setQuantidadeProdutos, valorTotalCarrinho, setValorTotalCarrinho} = useContext(CarrinhoContext);
+    const { formaPagamento } = usePagamentoContext();
     if(!carrinho || !setCarrinho){
         throw new Error('useCarrinhoContext deve ser usado dentro de um CarrinhoProvider');
     }
@@ -56,8 +57,8 @@ export const useCarrinhoContext = () => {
             novoTotal: 0
         })
         setQuantidadeProdutos(novaQuantidade);
-        setValorTotalCarrinho(novoTotal);
-    }, [carrinho, setQuantidadeProdutos, setValorTotalCarrinho]);
+        setValorTotalCarrinho(novoTotal * formaPagamento.juros);
+    }, [carrinho, setQuantidadeProdutos, setValorTotalCarrinho, formaPagamento]);
 
     return {carrinho, setCarrinho, adicionarProduto, removerProduto, quantidadeProdutos, setQuantidadeProdutos, valorTotalCarrinho};
 }
