@@ -51,6 +51,7 @@ function Carrinho() {
         onClick={() => {
           setOpenSnackbar(true);
         }}
+        disabled={total < 0}
         color="primary"
         variant="contained"
       >
