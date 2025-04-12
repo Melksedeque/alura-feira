@@ -39,8 +39,14 @@ export const PagamentoProvider = ({children}) => {
 export const usePagamentoContext = () => {
     const {tiposPagamento, formaPagamento, setFormaPagamento} = useContext(PagamentoContext);
 
+    function mudarFormaPagamento(id) {
+        const pagamento = tiposPagamento.find(pagamento => pagamento.id === id);
+        setFormaPagamento(pagamento);
+    }
+
     return {
         tiposPagamento,
-        formaPagamento
+        formaPagamento,
+        mudarFormaPagamento
     }
 }
