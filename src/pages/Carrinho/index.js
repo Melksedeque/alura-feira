@@ -23,11 +23,11 @@ function Carrinho() {
       <PagamentoContainer>
         <InputLabel> Forma de Pagamento </InputLabel>
         <Select value={formaPagamento.id} onChange={(e) => setFormaPagamento(e.target.value)}>
-          formaPagamento.map(formaPagamento => (
-            <MenuItem key={formaPagamento.id} value={formaPagamento.id}>
-              {formaPagamento.nome}
+          {tiposPagamento.map(pagamento => (
+            <MenuItem key={pagamento.id} value={pagamento.id}>
+              {pagamento.nome}
             </MenuItem>
-          ))
+          ))}
         </Select>
       </PagamentoContainer>
       <TotalContainer>
