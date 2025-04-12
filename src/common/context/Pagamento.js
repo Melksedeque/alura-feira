@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const PagamentoContext = createContext();
+export const PagamentoContext = createContext();
 
 PagamentoContext.displayName = "Pagamento";
 
