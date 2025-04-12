@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect } from 'react';
 import { useState } from 'react';
+import { UsuarioContext } from './Usuario';
 
 export const CarrinhoContext = createContext();
 CarrinhoContext.displayName = 'Carrinho';
@@ -18,6 +19,7 @@ export const CarrinhoProvider = ({children}) => {
 export const useCarrinhoContext = () => {
     const {carrinho, setCarrinho, quantidadeProdutos, setQuantidadeProdutos, valorTotalCarrinho, setValorTotalCarrinho} = useContext(CarrinhoContext);
     const { formaPagamento } = usePagamentoContext();
+    const { setSaldo } = useContext(UsuarioContext);
     if(!carrinho || !setCarrinho){
         throw new Error('useCarrinhoContext deve ser usado dentro de um CarrinhoProvider');
     }
@@ -48,6 +50,12 @@ export const useCarrinhoContext = () => {
         setCarrinho(mudarQuantidade(id, -1))
     }
 
+    function efetuarCompra() {
+        setCarrinho([]);
+        setSaldo(saldoAtual => saldoAtual - valorTotalCarrinho);
+        setQuantidadeProdutos(0);
+    }
+
     useEffect(() => {
         const {novoTotal, novaQuantidade}  = carrinho.reduce((contador, produto) => ({
             novaQuantidade: contador.novaQuantidade + produto.quantidade,
@@ -60,5 +68,5 @@ export const useCarrinhoContext = () => {
         setValorTotalCarrinho(novoTotal * formaPagamento.juros);
     }, [carrinho, setQuantidadeProdutos, setValorTotalCarrinho, formaPagamento]);
 
-    return {carrinho, setCarrinho, adicionarProduto, removerProduto, quantidadeProdutos, setQuantidadeProdutos, valorTotalCarrinho};
+    return {carrinho, setCarrinho, adicionarProduto, removerProduto, quantidadeProdutos, setQuantidadeProdutos, valorTotalCarrinho, efetuarCompra};
 }
