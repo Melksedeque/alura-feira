@@ -1,4 +1,4 @@
-import { Button, Snackbar, InputLabel } from '@material-ui/core';
+import { Button, Snackbar, InputLabel, Select, MenuItem } from '@material-ui/core';
 import MuiAlert from '@material-ui/lab/Alert';
 import { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
@@ -10,7 +10,7 @@ import { PagamentoContext } from 'common/context/Pagamento';
 function Carrinho() {
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const {carrinho} = useCarrinhoContext();
-  const { formaPagamento } = useContext(PagamentoContext);
+  const { tiposPagamento, formaPagamento, setFormaPagamento } = useContext(PagamentoContext);
   const history = useHistory();
   return (
     <Container>
@@ -22,6 +22,13 @@ function Carrinho() {
       {carrinho.map(produto => (<Produto key={produto.id} {...produto} />))}
       <PagamentoContainer>
         <InputLabel> Forma de Pagamento </InputLabel>
+        <Select value={formaPagamento.id} onChange={(e) => setFormaPagamento(e.target.value)}>
+          formaPagamento.map(formaPagamento => (
+            <MenuItem key={formaPagamento.id} value={formaPagamento.id}>
+              {formaPagamento.nome}
+            </MenuItem>
+          ))
+        </Select>
       </PagamentoContainer>
       <TotalContainer>
           <div>
