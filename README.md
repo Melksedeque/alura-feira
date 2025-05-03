@@ -1,6 +1,6 @@
 # Alura Feira
 
-Este projeto é uma aplicação web de feira online desenvolvida com React.js e Material-UI, que oferece uma experiência completa de compras virtuais.
+Alura Feira é uma aplicação web de feira online desenvolvida com React.js e estilizada com Material-UI, proporcionando uma experiência de compra virtual completa e intuitiva. Os usuários podem navegar por uma variedade de produtos, adicionar itens ao carrinho e realizar o checkout, tudo dentro de uma interface moderna e responsiva.
 
 ## Estrutura do Projeto
 
