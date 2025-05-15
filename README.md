@@ -55,7 +55,7 @@ No diretório do projeto, você pode executar:
 ### `yarn start`
 
 Executa a aplicação em modo de desenvolvimento.\
-Abra [http://localhost:3000](http://localhost:3000) para visualizá-la no navegador.
+Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
 
 ### `yarn test`
 
